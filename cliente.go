@@ -34,7 +34,7 @@ func UsuarioHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func usuarioPorID(w http.ResponseWriter, r *http.Request, id int) {
-	db, err := sql.Open("mysql", "root:1234@/")
+	db, err := sql.Open("mysql", "root:1234@/testsql")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -50,7 +50,7 @@ func usuarioPorID(w http.ResponseWriter, r *http.Request, id int) {
 }
 
 func usuarioTodos(w http.ResponseWriter, r *http.Request) {
-	db, err := sql.Open("mysql", "root:1234@/")
+	db, err := sql.Open("mysql", "root:1234@/testsql")
 	if err != nil {
 		log.Fatal(err)
 	}
